@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Athena Archive</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <!--
+    Tento soubor reprezentuje úvodní stránku zamýšlené webové aplikace. Vytváříme 4 textová pole, 
+    do nichž bude uživatel zadávaj údaje, toto textové pole deklarujeme pomocí <input type = "text">.
+    Argument name reprezentuje jméno, pod kterým bude údaj v textovém poli programem rozeznáván. 
+    Můžeme použít i argument value, čímž necháme zobrazit v textovém poli nějaký implicitní text. Příkaz
+    <input type = "submit"> reprezentuje tlačítko, kterým údaje vložíme, respektive kterým spustíme program.
+    Nakonec musíme kód zapouzdřit ve formuláři, který zároveň určí servlet, který se bude požadavkem uživatele
+    zabývat (podobně jako u GUI bylo třeba controlleru). Na tento servlet odkazujeme pomocí příkazu 
+    <form action = "cestakservletu">.
+    
+    Formuláře zde máme celkem dva, druhý akorát demonstruje ukázku, jak snadno implementovat přechod na jinou
+    stránku. Syntaxi je ještě možno více zjednodušit, kdy místo cesty ke controlleru napíšeme cílovou stránku.
+    -->
+        <h2>Details</h2><br/><br/>
+        <form action = "./AthenaControl" method="POST">
+        Name: <input type = "text" name = "name"><br/> 
+        Status: <input type = "text" name = "status"><br/>
+        Place: <input type = "text" name = "place"><br/> 
+        Pass: <input type = "text" name = "pass"><br/><br/>
+        <input type = "submit" value = "submit">
+        </form><br/>
+        <form action = "./AthenaControl2" method="POST">
+        <input type = "submit" value = "Ask for help">
+        </form>
+    </body>
+</html>
